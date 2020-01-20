@@ -3,7 +3,7 @@
 M2_HOME=${HOME}/.m2
 mkdir -p ${M2_HOME}
  
-M2_LOCAL_REPO="${ROOT_FOLDER}/.m2"
+M2_LOCAL_REPO=".m2"
  
 mkdir -p "${M2_LOCAL_REPO}/repository"
  
@@ -21,7 +21,7 @@ EOF
 cat ${M2_HOME}/settings.xml
 
 echo "listing m2 contents"
-ls -ltr ${HOME}/.m2
+ls -ltr ${M2_LOCAL_REPO}/repository
 
 cd source-code || echo "missing input resource: source-code"
 
