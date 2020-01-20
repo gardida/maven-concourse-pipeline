@@ -30,6 +30,7 @@ if [[ ! -f ${stub} ]]; then
   exit 1
 fi
 
+
 pushd $DIR
   fly sp -t ${fly_target} configure -c pipeline.yml -p main --load-vars-from ${stub} -n
   fly -t ${fly_target} unpause-pipeline --pipeline main
