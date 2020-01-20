@@ -18,6 +18,11 @@ cat > ${M2_HOME}/settings.xml <<EOF
  
 EOF
 
+cat ${M2_HOME}/settings.xml
+
+echo "listing m2 contents"
+ls -ltr ${HOME}/.m2
+
 cd source-code || echo "missing input resource: source-code"
 
 echo "Using MAVEN_OPTS: ${MAVEN_OPTS}"
